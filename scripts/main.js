@@ -63,33 +63,33 @@ console.log(sumSalary(salaries));
 
 //#### Task 6 🖥
 
-// const validateValue = function (value) {
-//     return value.length > 3 && value.length <= 10;
-// };
+const validateValue = function (value) {
+    return value.length > 3 && value.length <= 10;
+};
 
-// const createUser = function () {
-//     const user = {
-//         login: '',
-//         password: '',
-//     };
+const createUser = function () {
+    const user = {
+        login: '',
+        password: '',
+    };
     
-//     do {
-//         user.login = prompt('login');
-//     } while (validateValue(user.login) === false)
+    do {
+        user.login = prompt('login');
+    } while (validateValue(user.login) === false)
     
-//     do {
-//         user.password = prompt('password');
-//     } while (validateValue(user.password) === false)
+    do {
+        user.password = prompt('password');
+    } while (validateValue(user.password) === false)
 
-//     return user;
-// };
+    return user;
+};
 
-// const user1 = createUser();
-// const user2 = createUser();
+const user1 = createUser();
+const user2 = createUser();
 
-// if (user1.login === user2.login && user1.password === user2.password) {
-//     console.log('Welcome');
-// }
+if (user1.login === user2.login && user1.password === user2.password) {
+    console.log('Welcome');
+}
 
 //Advanced 
 //Task 2
@@ -123,8 +123,12 @@ const animals = {
     }
 }
 
-animals.name?.replace('name:','');
-
-console.log(animals.bird.name);
-
+animals.bird?.name === (animals.bird && animals.bird.name)
+console.log(animals.bird?.name || 'Bird or bird name not exist')
+if(animals.bird && animals.bird.name) {
+    console.log(animals.bird.name)
+}
+else {
+    console.log('Bird or bird name not exist')
+}
 
